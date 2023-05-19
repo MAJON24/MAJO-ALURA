@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'DynaPuff', cursive;
+}
+
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Header */
+
+header{
+    background-image: radial-gradient(#2a2929 2px, transparent 2px), radial-gradient(#2a2929 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #302f2f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.menu{
+    
+    width: 95%;
+    margin-inline: auto;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (min-width:768px) {
+    .menu{
+        flex-direction: row;
+    }
+}
+
+.logo{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a{
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .logo img{
+        display: none;
+    }
+}
+
+.navegacion{
+    background-color: red;
+    flex: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(-130%);
+    transition:  transform .5s ease;
+    background-image: radial-gradient(#2a2929 2px, transparent 2px), radial-gradient(#2a2929 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #302f2f;
+}
+
+@media (min-width:768px) {
+    .navegacion{
+        position: static;
+        transform: translateY(0%);
+    }
+}
+.navegacion--dinamico{
+    top: 60px;
+    transform: translateY(0%);
+}
+.navegacion--lista{
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.navegacion--lista li{
+    width: 100%;
+    text-align: center;
+}
+.navegacion--lista li a{
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight:700;
+}
+.navegacion--lista li a:hover{
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+
+.banner{
+    background-image: linear-gradient(45deg, #ff4747 50%, transparent 50%);
+    background-size: 20px 20px;
+    background-color: #E70112;
+    overflow: hidden;
+}
+
+.banner--contenedor{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner--info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding-block: 20px;
+    color: white;
+}
+
+.banner--info h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.banner--info a{
+    border: 5px solid white;
+    background-color: white;
+    font-weight: 900;
+    color: black;
+    border-radius: 10px;
+    padding-block: 5px;
+    padding-inline: 15px;
+    transition: all .5s ease;
+
+}
+
+.banner--info a:hover{
+    transform: scale(1.2);
+    background-color: #302f2f;
+    color: white;
+    border-color: white;
+}
+
+.banner--imagen{
+    position: relative;
+}
+.banner--imagen picture:first-child img{
+    animation: imagenUno 5s infinite linear;
+}
+.banner--imagen picture:last-of-type img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    animation: imagenDos 5s infinite linear;
+}
+
+@keyframes imagenUno{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes imagenDos{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Nubes */
+.nubes-svg{
+    display: flex;
+    background-image: linear-gradient(45deg, #ff4747 50%, transparent 50%);
+    background-size: 20px 20px;
+    background-color: #E70112;
+
+}
+/* Main */
+/* Manten un nombramiento de clases fijo, en todo tu css tienes clases nombradas en minuscula y separadas por guiones, aquí antes
+tenías "Imagenes--de--Myke */
+.imagenes-de-myke{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(rgba(40, 40, 40, 0.15) 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-color: #ffffff;
+}
+
+.contenedor-imagenes{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.contenedor-imagenes img{
+    width: 200px;
+    margin: 10px 0;
+}
+
+.imagenes-de-myke h2{
+    text-align: center;    
+    color: #2a2929;
+}
+
+.imagenes-de-myke p{
+    text-align: center;
+    padding: 50px;
+}
+
+
+/* Footer */
+.footer{
+    background:
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(1*32px) calc(3*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(2*32px) calc(1*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(3*32px) calc(4*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(4*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) 0 calc(4*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(1*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(2*32px) 0,
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(3*32px) calc(3*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(4*32px) calc(1*32px),
+      	#2a2929;
+    background-size: 160px 160px;
+}
+
+.footer--contenedor{
+    border-top: 5px solid rgba(246, 241, 241, 0.15);
+    color: white;
+    padding-block: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+
+.navegacion--footer{
+    gap: 10px;
+}
+
+/* Normalmente, los media querys van en la parte final de los estilos, pero no es algo obligatorio. */
+
+@media screen and (max-width: 768px) {
+
+    .contenedor-imagenes{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .contenedor-imagenes img{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer--contenedor{
+        flex-direction: row;
+    }
+}
+
+@media (min-width:768px) {
+    .banner--info{
+        align-items: start;
+        text-align: start;
+        width: 50%;
+    }
+
+}
+
+@media (min-width:768px) {
+    .navegacion--lista{
+        flex-direction: row;
+        padding-block:0 ;
+    }
+}
